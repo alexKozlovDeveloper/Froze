@@ -159,3 +159,8 @@ $RECYCLE.BIN/
 AdamDemo.Web.Studio/Uploads
 
 *.orig
+
+*.suo
+*.lock
+*.ide
+*.cashe
