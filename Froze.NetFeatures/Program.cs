@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Froze.Core.Logging;
+using Froze.NetFeatures.Features;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +12,13 @@ namespace Froze.NetFeatures
     {
         static void Main(string[] args)
         {
+            var logger = new Logger();
+
+            var runner = new FeatureRunner();
+
+            var feature = new AsyncAwaitFeature(logger);
+
+            runner.Run(feature);
         }
     }
 }
