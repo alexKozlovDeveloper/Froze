@@ -1,4 +1,5 @@
 ﻿using Froze.Core.Logging;
+using Froze.Core.Math;
 using Froze.NetFeatures.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -19,7 +20,11 @@ namespace Froze.NetFeatures.Features
 
         public void Run()
         {
-            
+            var calc = new Calc(_logger);
+
+            var d1 = calc.Factorial(4);
+
+            var d2 = calc.FactorialAsync(4);
         }
     }
 }

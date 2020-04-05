@@ -31,13 +31,15 @@ namespace Froze.Core.Math
             return result;
         }
 
-        public async void FactorialAsync(int ind)
+        public async int FactorialAsync(int ind)
         {
             _logger.Info("[FactorialAsync] Start.");
 
             await Task.Run(() => Factorial(ind));  
             
             _logger.Info("[FactorialAsync] Finish.");
+
+            return 0;
         }
     }
 }
